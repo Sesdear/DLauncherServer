@@ -21,12 +21,12 @@ Example path: `AvalibleServers[1]` -> `/api/servers/{AvalibleServers[1]}/data`
 
 ``` Json
 {
-	"ServerName":"Server name 1", 
-	"Description":"Very intresting description",
-	"ImagePath":"/files/ExampleServer/icon.png",
-	"MinecraftVersion":"1.20.1",
-	"MinecraftModLoader":"forge",
-	"MinecraftModLoaderVersion":"4.19.1",
+    "ServerName":"Server name 1", 
+    "Description":"Very intresting description",
+    "ImagePath":"/files/ExampleServer/icon.png",
+    "MinecraftVersion":"1.20.1",
+    "MinecraftModLoader":"forge",
+    "MinecraftModLoaderVersion":"4.19.1",
     "FilesRepoURL":"https://example-git.com/repo.git"
 }
 
