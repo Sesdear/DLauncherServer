@@ -1,0 +1,9 @@
+{
+    "ServerName":"Server name 1", 
+    "Description":"Very intresting description",
+    "ImagePath":"",
+    "MinecraftVersion":"1.20.1",
+    "MinecraftModLoader":"forge",
+    "MinecraftModLoaderVersion":"4.19.1",
+    "FilesRepoURL":"https://example-git.com/repo.git"
+}

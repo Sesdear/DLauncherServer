@@ -5,7 +5,7 @@
 
 ``` Json
 {
-    "Servers": [
+    "servers": [
         "ExampleServer1",
         "ExampleServer2",
         "ExampleServer3",
@@ -42,7 +42,8 @@ Server data manifest contains:
 
 
 
-#### `/api/minecraft-repos` Mineraft repos information manifest
+## `/api/minecraft_repos` 
+#### Mineraft repos information manifest
 
 ``` Json
 {
