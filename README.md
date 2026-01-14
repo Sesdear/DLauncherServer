@@ -6,7 +6,7 @@ Special API Server on FastAPI for DLauncher4 1.5.0.0 or above
 
 В папке `ServerArchitecture` находиться документация по файлам проекта и по тому как устроенна система манифестов
 
-
+Manifest system - (Manifests.md)[https://github.com/Sesdear/DLauncherServer/blob/main/ServerArchitectures/Manifests.md]
 
 
 ### Api returns
