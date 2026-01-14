@@ -27,5 +27,5 @@ Directory sturcutre - [DirectoryStructure](https://github.com/Sesdear/DLauncherS
 `uvicorn app.main:app --reload`
 
 #### Docker
-Docker bind to port 6060, to change edir docker-compose.yaml
+Docker bind to port 6060, to change edir docker-compose.yaml \
 `docker-compose up -d` / `docker compose up -d`
