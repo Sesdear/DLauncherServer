@@ -15,6 +15,8 @@ Special API Server on FastAPI for DLauncher4 1.5.0.0 or above
 `/api/minecraft_repos` GET return json from `app/jsons/minecraft_repo.json` \
 `/api/servers/exampleServer1/data` GET return json from `app/jsons/servers/exampleServer.json`
 
+Для добовления нового сервера просто закинуть `<server name>.json` в app/jsons/servers/
+
 
 ### Развертывание
 Клонировать репозиторий
