@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Path
 from app.json_provider import get_json
 
 
@@ -9,7 +9,8 @@ router: APIRouter = APIRouter(
 )
 
 
-@router.get('/server1/data')
-async def get_minecraft_repos() -> dict:
-    _json_data = get_json("servers/server1")
-    return _json_data
+
+@router.get("/{server}/data")
+async def get_server_data(server: str = Path(..., description="Server name like 'server1'")) -> dict:
+    json_data = get_json(f"servers/{server}")
+    return json_data

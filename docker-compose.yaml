@@ -4,6 +4,8 @@ services:
     build: .
     container_name: DLServer
     restart: always
+    ports:
+      - "6060:8000"
     volumes:
       - .:/app
     environment:
