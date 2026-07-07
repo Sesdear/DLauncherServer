@@ -1,12 +1,42 @@
-version: '3.8'
 services:
-  name:
+  dlserver:
     build: .
-    container_name: DLServer
+    container_name: dlserver
     restart: always
     ports:
-      - "6060:8000"
+      - "127.0.0.1:6060:8000"
+    env_file:
+      - .env.dev
     volumes:
-      - .:/app
+      - .:/app:Z
     environment:
       - PYTHONUNBUFFERED=1
+    depends_on:
+      dlserver_postgres_db:
+        condition: service_healthy
+    networks:
+      - dlserver-network
+
+  dlserver_postgres_db:
+    image: postgres:16.3-alpine
+    container_name: dlserver_postgres_db
+    restart: always
+    env_file:
+      - .env.dev
+    volumes:
+      - dlserverpgdata_volume:/var/lib/postgresql/data:Z
+      - ./init-scripts:/docker-entrypoint-initdb.d:Z
+    networks:
+      - dlserver-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  dlserverpgdata_volume:
+
+networks:
+  dlserver-network:
+    driver: bridge
